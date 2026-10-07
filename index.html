@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio Redação Nota 1000 - ENEM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Desafio Redação Nota 1000 🚀</h1>
+    <p>Aprenda a estrutura perfeita do ENEM jogando!</p>
+    <div id="score-board">Pontuação: <span id="score">0</span> pts</div>
+  </header>
+
+  <main class="container">
+    
+    <!-- FASE 1: INTRODUÇÃO -->
+    <section class="card" id="fase-1">
+      <h2>Fase 1: A Introdução Perfeita</h2>
+      <p class="instruction">Uma introdução Nota 1000 precisa de: <strong>Repertório + Tese + Projeto de Texto (Duas Teses/Causas)</strong>.</p>
+      
+      <div class="text-box" id="intro-text">
+        "Na obra 'Outras Idéias', Sérgio Buarque de Holanda analisa as marcas do patrimonialismo na sociedade brasileira..."
+      </div>
+
+      <div class="game-area">
+        <p><strong>Qual é a Tese Principle (Causa 1) apresentada pelo autor nesta introdução?</strong></p>
+        <button class="btn-option" onclick="checkAnswer(1, true)">A) O legado histórico de negligência estatal com a cultura digital.</button>
+        <button class="btn-option" onclick="checkAnswer(1, false)">B) A falta de investimento das famílias em livros impressos.</button>
+        <button class="btn-option" onclick="checkAnswer(1, false)">C) O excesso de tecnologia no ambiente escolar pré-público.</button>
+      </div>
+      <div id="feedback-1" class="feedback"></div>
+    </section>
+
+    <!-- FASE 2: DESENVOLVIMENTO 1 (CAUSA 1) -->
+    <section class="card locked" id="fase-2">
+      <h2>Fase 2: Desenvolvimento 1 (Argumentação & Repertório)</h2>
+      <p class="instruction">Ordene os parágrafos para formar a sequência argumentativa correta da Competência 3!</p>
+      
+      <div class="drag-container" id="drag-items">
+        <div class="drag-item" data-order="1">Em primeiro lugar, cabe pontuar que a inoperância governamental perpetua o problema.</div>
+        <div class="drag-item" data-order="3">Logo, torna-se imperativo reconfigurar a atuação do Estado nessa esfera.</div>
+        <div class="drag-item" data-order="2">Segundo Thomas Hobbes, o Estado deve garantir o bem-estar coletivo, o que não ocorre na prática.</div>
+      </div>
+
+      <button class="btn-submit" onclick="checkOrder()">Verificar Ordem Argumentativa</button>
+      <div id="feedback-2" class="feedback"></div>
+    </section>
+
+    <!-- FASE 3: PROPOSTA DE INTERVENÇÃO (CINCO ELEMENTOS) -->
+    <section class="card locked" id="fase-3">
+      <h2>Fase 3: A Proposta de Intervenção (Competência 5)</h2>
+      <p class="instruction">Uma Proposta Nota 1000 exige 5 elementos obrigatórios: <strong>Agente, Ação, Meio/Modo, Efeito e Detalhamento</strong>.</p>
+
+      <div class="checklist-game">
+        <p>Selecione abaixo os 5 elementos presentes na proposta abaixo:</p>
+
+        <blockquote class="text-box">
+          "Portanto, cabe ao Ministério da Educação (Agente), mediante reformulação curricular (Meio), implementar oficinas de letramento digital (Ação), a fim de mitigar a alienação cibernética (Efeito). Essa medida pode ser detalhada com parcerias junto a universidades públicas (Detalhamento)."
+        </blockquote>
+
+        <label><input type="checkbox" id="elem-1"> Agente (Quem faz?)</label><br>
+        <label><input type="checkbox" id="elem-2"> Ação (O que faz?)</label><br>
+        <label><input type="checkbox" id="elem-3"> Meio/Modo (Como faz?)</label><br>
+        <label><input type="checkbox" id="elem-4"> Efeito (Para que faz?)</label><br>
+        <label><input type="checkbox" id="elem-5"> Detalhamento (Exemplo/Explicação extra)</label><br>
+
+        <button class="btn-submit" onclick="checkChecklist()">Confirmar Elementos</button>
+      </div>
+      <div id="feedback-3" class="feedback"></div>
+    </section>
+
+    <!-- FINAL -->
+    <section class="card locked" id="fase-final">
+      <h2>🎉 Parabéns! Você Dominou a Estrutura Nota 1000!</h2>
+      <p>Você completou a análise detalhada da redação e compreendeu os pilares exigidos pelos avaliadores do ENEM.</p>
+      <div class="text-box">
+        <h3>Resumo das Competências Aprendidas:</h3>
+        <ul>
+          <li><strong>C1 & C2:</strong> Uso legítimo e produtivo do repertório sociocultural.</li>
+          <li><strong>C3:</strong> Projeto de texto estratégico com causas bem delimitadas.</li>
+          <li><strong>C4:</strong> Coesão inter e intraparágrafos (conectivos adequados).</li>
+          <li><strong>C5:</strong> Proposta completa com os 5 elementos obrigatórios.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
